@@ -41,9 +41,26 @@ Conventionally, the hull reference frame is considered, so the X, Y and Z axis a
 >      Body below the waterpane
 >      
 ## Getting started
-To use nautilus you will need an environment with the <a href="https://ubuntu.com/" target="_blank">Ubuntu</a> distribution of Linux and the cloned nautilus repository. A virtual environment or <a href="https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview" target="_blank">Windows Subsystem for Linux (WSL)</a> will also work.
+To use Nautilus you will need an environment with the <a href="https://ubuntu.com/" target="_blank">Ubuntu</a> distribution of Linux and the cloned nautilus repository. A virtual environment or <a href="https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview" target="_blank">Windows Subsystem for Linux (WSL)</a> will also work.
 
-When you are using nautilus for the first time we suggest running the test case provided in the main branch. We have provided a test hull (the <a href="http://www.simman2008.dk/KCS/kcs_geometry.htm" target="_blank">KCS</a> with appendages) and an example test case to analyze the test hull under design conditions.
+When you are using nautilus for the first time we suggest running the test cases provided in the main branch. We have provided a test hull (the <a href="http://www.simman2008.dk/KCS/kcs_geometry.htm" target="_blank">KCS</a> with appendages) in the `geo/` folder.
+
+We have provided the source and binaries for two example test cases:
+1. `hydrostatics` - To determine the hydrostatics of the test case hull and (optionally) write the wetted hell to an STL file.
+The hydrostatics binary takes the following inputs:
+>       Input file (STL) - manditory
+>       Draft(s) - manditory
+>       Output for hydrostatics - optional (otherwise printed to the terminal)
+>       Output for the wetted hull - optional
+
+2. `faststatics` - To determine the hydrostatics of the test case hull using the fast implientation.
+The faststatics binary takes the following inputs:
+>       Input file (STL) - manditory
+>       Draft(s) - manditory
+>       Output for hydrostatics - optional (otherwise printed to the terminal)
+
+In `Run` we have provided a bash script that can be used to call the above test cases. You can execute the file with the following command in the Linux terminal
+>       sh Run
  
 ## Methods
 The file `src/SuperficieN.h` is the class header, so it contains the class description. The following is a simple description of the main implemented methods:
