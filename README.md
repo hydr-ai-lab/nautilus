@@ -1,4 +1,4 @@
-# nataulis
+# Nataulis
 **\\ nȯ-tə-ləs \\**
 
 >       The "Nautilus" was a masterpiece containing masterpieces with itself, and the engineer was struck with astonishment.
@@ -17,7 +17,7 @@ Hydrostatic analysis tool for vessels
   * [publications](#publications)
 
 ## introduction
-**nataulis** is a hydrodynamic analysis tool for vessels written in c++ and compiled for Linux. Given the 3D definition of a hull (in STL format) and a specified draft, nautilus can extract the principal hydrodynamic features of the hull.
+**Nataulis** is a hydrodynamic analysis tool for vessels written in c++ and compiled for Linux. Given the 3D definition of a hull (in STL format) and a specified draft, nautilus can extract the principal hydrodynamic features of the hull.
 
 In the current release of nautilus there are three main functional uses for this package:
 
