@@ -6,7 +6,7 @@
 
 Hydrostatic analysis tool for vessels
 
-### contents
+### Contents
 - [Nataulis](#nataulis)
   * [Introduction](#Introduction)
   * [Getting started](#Getting-started)
