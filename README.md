@@ -42,6 +42,37 @@ Conventionally, the hull reference frame is considered, so the X, Y and Z axis a
 
 >      Body below the waterpane
 
+The file `src/SuperficieN.h` is the class header, so it contains the class description. The following is a simple description of the main implemented methods:
+
+Default and copy constructor
+>       Superficie() and Superficie(const Superficie& s)
+Default destructor
+>       virtual ~Superficie()
+Read and write an STL file (if more than one layer is used the output can be split using Multi version)
+>       void readSTL(std::string nomeFile), void writeSTL(std::string nomeFile) and void writeSTLMulti(std::string nomeFile,bool separated=false)
+Print the surface structure
+>       void print()
+Add a single Polygon which is automatically welded with the rest of the surface
+>       void addPoligono(std::vector<Punto> ls,std::string layer="")
+Get the number of Vertices, Edges and Polygons in the surface.
+>       int numeroVertici(), int numeroLati(), int numeroPoligoni() and	int numeroBoundary()
+Rotate the entire Surface with respect to the origine and around asse of an angolo in degrees.
+>       void rotazione(Punto asse, Punto origine, double angolo)
+Translate the entire Surface of vettore
+>       void traslazione(Punto vettore)
+Scale the entire Surface of a fattore with respect to origine
+>       void scala(Punto origine,Punto fattore)
+Mirror the entire Surface with respect to the plane defined by origine and asse (if needed a copy can be added)
+>       void specchia(Punto origine,Punto asse,bool copy=false)
+Check if the surface is closed (needed for the calculations)
+>       bool isclosed()
+Impose that all the polygons have the same normal direction
+>       void coherencedNormals()
+Flip the polygon normals of all the surface 
+>       void flipNormals()
+Provide the bounds of the surface (in an ordered vector: Xmax, Ymax, Zmax, Xmin, Ymin, Zmin)
+>       Vettore<double> bounds()
+
 ## getting started
 To use nautilus you will need an environment with the <a href="https://ubuntu.com/" target="_blank">Ubuntu</a> distribution of Linux and the cloned nautilus repository. A virtual environment or <a href="https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview" target="_blank">Windows Subsystem for Linux (WSL)</a> will also work.
 
