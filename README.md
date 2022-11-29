@@ -19,9 +19,9 @@ Hydrostatic analysis tool for vessels
 
 In the current release of nautilus there are three main functional uses for this package:
 
-1. calculate the hydrostatics of the submerged volume of the hull given the draft;
-2. calculate the hydrostatics of a hull section given the draft;
-3. write the wetted part of the hull to an STL file.
+1. Calculate the hydrostatics of the wetted hull given the draft;
+2. Calculate the hydrostatics of the waterplane section given the draft;
+3. Write the wetted part of the hull to an STL file.
 
 These functions are implemented into the `Hydrostatic`, `Section`, and `Cut` methods of the `SuperficieN` class respectively.
 Additionally, there is a *fast* implementation of both methods to calculate the hydrostatics called `HydrostaticFast` and `SectionFast` which leverage an algorithm to accelerate the calculation. The *fast* algorithm adopts an internal tree structure on which all the surface polygons are stored, therefore, speeding up the searching algorithm to identify if a polygon is above or below the free-surface plane.
@@ -46,18 +46,25 @@ To use Nautilus you will need an environment with the <a href="https://ubuntu.co
 When you are using nautilus for the first time we suggest running the test cases provided in the main branch. We have provided a test hull (the <a href="http://www.simman2008.dk/KCS/kcs_geometry.htm" target="_blank">KCS</a> with appendages) in the `geo/` folder.
 
 We have provided the source and binaries for two example test cases:
-1. `hydrostatics` - To determine the hydrostatics of the test case hull and (optionally) write the wetted hell to an STL file.
+1. `hydrostatics` - To determine the hydrostatics of the wetted body and waterplane surface given the draft(s) and (optionally) write the wetted hell to an STL file.
 The hydrostatics binary takes the following inputs:
 >       Input file (STL) - manditory
 >       Draft(s) - manditory
 >       Output for hydrostatics - optional (otherwise printed to the terminal)
 >       Output for the wetted hull - optional
 
+The output will be written to the specified file or the terminal if there are only two input arguments:
+>       Draft, V, BX, BY, BZ, Sw, A, FX, FY, FZ, Ix, Iy, Lwl, Bwl
+
+
 2. `faststatics` - To determine the hydrostatics of the test case hull using the fast implientation.
 The faststatics binary takes the following inputs:
 >       Input file (STL) - manditory
 >       Draft(s) - manditory
 >       Output for hydrostatics - optional (otherwise printed to the terminal)
+
+The output will be written to the specified file or the terminal if there are only two input arguments:
+>       Draft, V, BX, BY, BZ, Sw, A, FX, FY, FZ, Ix, Iy, Lwl, Bwl
 
 In `Run` we have provided a bash script that can be used to call the above test cases. You can execute the file with the following command in the Linux terminal
 >       sh Run
