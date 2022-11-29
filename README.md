@@ -9,8 +9,8 @@ Hydrostatic analysis tool for vessels
 ### contents
 - [Nataulis](#nataulis)
   * [Introduction](#Introduction)
-  * [Methods](#Methods)
   * [Getting started](#Getting-started)
+  * [Methods](#Methods)
   * [Instructions](#Instructions)
   * [Publications](#Publications)
 
@@ -39,7 +39,12 @@ Conventionally, the hull reference frame is considered, so the X, Y and Z axis a
 `Cut` calculates the wetted part of the geometry returning a new surface object (it adopts the same algoritm of previous functions)
 
 >      Body below the waterpane
+>      
+## Getting started
+To use nautilus you will need an environment with the <a href="https://ubuntu.com/" target="_blank">Ubuntu</a> distribution of Linux and the cloned nautilus repository. A virtual environment or <a href="https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview" target="_blank">Windows Subsystem for Linux (WSL)</a> will also work.
 
+When you are using nautilus for the first time we suggest running the test case provided in the main branch. We have provided a test hull (the <a href="http://www.simman2008.dk/KCS/kcs_geometry.htm" target="_blank">KCS</a> with appendages) and an example test case to analyze the test hull under design conditions.
+ 
 ## Methods
 The file `src/SuperficieN.h` is the class header, so it contains the class description. The following is a simple description of the main implemented methods:
 
@@ -72,11 +77,7 @@ Flip the polygon normals of all the surface
 Provide the bounds of the surface (in an ordered vector: Xmax, Ymax, Zmax, Xmin, Ymin, Zmin)
 >       Vettore<double> bounds()
 
-## Getting started
-To use nautilus you will need an environment with the <a href="https://ubuntu.com/" target="_blank">Ubuntu</a> distribution of Linux and the cloned nautilus repository. A virtual environment or <a href="https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview" target="_blank">Windows Subsystem for Linux (WSL)</a> will also work.
 
-When you are using nautilus for the first time we suggest running the test case provided in the main branch. We have provided a test hull (the <a href="http://www.simman2008.dk/KCS/kcs_geometry.htm" target="_blank">KCS</a> with appendages) and an example test case to analyze the test hull under design conditions.
- 
  ## Instructions
 
 ## Publications
