@@ -7,16 +7,14 @@
 Hydrostatic analysis tool for vessels
 
 ### contents
-- [nataulis](#nataulis)
-  * [introduction](#introduction)
-  * [getting started](#getting-started)
-  * [instructions](#instructions)
-    + [tutorial 1](#tutorial-1)
-    + [tutorial 2](#tutorial-2)
-    + [trouble shooting](#trouble-shooting)
-  * [publications](#publications)
+- [Nataulis](#nataulis)
+  * [Introduction](#Introduction)
+  * [Methods](#Methods)
+  * [Getting started](#Getting-started)
+  * [Instructions](#Instructions)
+  * [Publications](#Publications)
 
-## introduction
+## Introduction
 **Nataulis** is a hydrodynamic analysis tool for vessels written in c++ and compiled for Linux. Given the 3D definition of a hull (in STL format) and a specified draft, nautilus can extract the principal hydrodynamic features of the hull.
 
 In the current release of nautilus there are three main functional uses for this package:
@@ -42,6 +40,7 @@ Conventionally, the hull reference frame is considered, so the X, Y and Z axis a
 
 >      Body below the waterpane
 
+## Methods
 The file `src/SuperficieN.h` is the class header, so it contains the class description. The following is a simple description of the main implemented methods:
 
 Default and copy constructor
@@ -73,12 +72,14 @@ Flip the polygon normals of all the surface
 Provide the bounds of the surface (in an ordered vector: Xmax, Ymax, Zmax, Xmin, Ymin, Zmin)
 >       Vettore<double> bounds()
 
-## getting started
+## Getting started
 To use nautilus you will need an environment with the <a href="https://ubuntu.com/" target="_blank">Ubuntu</a> distribution of Linux and the cloned nautilus repository. A virtual environment or <a href="https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview" target="_blank">Windows Subsystem for Linux (WSL)</a> will also work.
 
 When you are using nautilus for the first time we suggest running the test case provided in the main branch. We have provided a test hull (the <a href="http://www.simman2008.dk/KCS/kcs_geometry.htm" target="_blank">KCS</a> with appendages) and an example test case to analyze the test hull under design conditions.
+ 
+ ## Instructions
 
-## publications
+## Publications
 If you find this tool useful please consider citing our publications: 
 
         
