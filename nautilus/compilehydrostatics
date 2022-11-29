@@ -1,0 +1,10 @@
+#!/bin/bash
+# Release: Optimized for Speed
+
+echo "---------------------Compiling /bin/hydrostatics---------------------"
+rm bin/hydrostatics
+cd src
+g++ -std=c++0x -I"../" -O2 -Wall -c -fmessage-length=0 hydrostatics.cpp 
+g++ -L"../lib" -o ../bin/hydrostatics hydrostatics.o -lSuperficieN -lBaseN
+rm hydrostatics.o
+cd ..

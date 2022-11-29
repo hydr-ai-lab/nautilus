@@ -78,7 +78,7 @@ Provide the bounds of the surface (in an ordered vector: Xmax, Ymax, Zmax, Xmin,
 >       Vettore<double> bounds()
 
 
- ## Instructions
+## Instructions
 
 ## Publications
 If you find this tool useful please consider citing our publications: 

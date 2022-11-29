@@ -1,0 +1,19 @@
+#!/bin/bash
+# RUN: Loop over files and write to text document 
+
+echo "---------------------Calculating Hydrostatics---------------------"
+f1=geo
+f2=out
+f3=cut
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd)/lib
+
+for FILE in $f1/*.stl
+do
+  filename=$(echo | basename "$FILE");
+  echo In file: $filename
+
+ # ./bin/hydrostatics $FILE "0,0.1,0.2,0.3" "$f2/out.csv" "$f3/KCS"\
+  ./bin/faststatics $FILE "0,0.1,0.2,0.3" "$f2/out_fast.csv"
+
+done
