@@ -96,6 +96,10 @@ Provide the bounds of the surface (in an ordered vector: Xmax, Ymax, Zmax, Xmin,
 
 
 ## Instructions
+To write your own binaries for hydrostatic analysis the following steps are required.
+1.  Write a c++ source file;
+2.  Compile the source file using the g++ compiler and the Nautilus libraries;
+3.  Run the binary.
 
 ## Publications
 If you find this tool useful please consider citing our publications: 
