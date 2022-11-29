@@ -46,7 +46,7 @@ To use Nautilus you will need an environment with the <a href="https://ubuntu.co
 When you are using nautilus for the first time we suggest running the test cases provided in the main branch. We have provided a test hull (the <a href="http://www.simman2008.dk/KCS/kcs_geometry.htm" target="_blank">KCS</a> with appendages) in the `geo/` folder.
 
 We have provided the source and binaries for two example test cases:
-1. `hydrostatics` - To determine the hydrostatics of the wetted body and waterplane surface given the draft(s) and (optionally) write the wetted hell to an STL file.
+1. `hydrostatics` - To determine the hydrostatics of the wetted body and waterplane surface (i.e., implementing the `Hydrostatic` and `Section` methods) given the draft(s) and (optionally) write the wetted hell to an STL file (i.e., implementing the `Cut` method).
 The hydrostatics binary takes the following inputs:
 >       Input file (STL) - manditory
 >       Draft(s) - manditory
@@ -57,7 +57,7 @@ The output will be written to the specified file or the terminal if there are on
 >       Draft, V, BX, BY, BZ, Sw, A, FX, FY, FZ, Ix, Iy, Lwl, Bwl
 
 
-2. `faststatics` - To determine the hydrostatics of the test case hull using the fast implientation.
+2. `faststatics` - To determine the hydrostatics of the wetted body and waterplane surface using the fast implementations (i.e., the `HydrostaticFast` and `SectionFast` methods).
 The faststatics binary takes the following inputs:
 >       Input file (STL) - manditory
 >       Draft(s) - manditory
