@@ -15,11 +15,11 @@ Hydrostatic analysis tool for vessels
   * [Publications](#Publications)
 
 ## Introduction
-**Nataulis** is a hydrodynamic analysis tool for vessels written in c++ and compiled for Linux. Given the 3D definition of a hull (in STL format) and a specified draft, nautilus can extract the principal hydrodynamic features of the hull.
+**Nataulis** is a hydrostatic analysis tool for vessels written in c++ and compiled for Linux. Given the 3D definition of a hull (in STL format) and a specified draft, Nautilus can extract the principal hydrostatic features of the hull.
 
-In the current release of nautilus there are three main functional uses for this package:
+In the current release of nautilus there are three main functional uses:
 
-1. Calculate the hydrostatics of the wetted hull given the draft;
+1. Calculate the hydrostatics of the wetted hull body given the draft;
 2. Calculate the hydrostatics of the waterplane section given the draft;
 3. Write the wetted part of the hull to an STL file.
 
@@ -38,7 +38,7 @@ Conventionally, the hull reference frame is considered, so the X, Y and Z axis a
 
 `Cut` calculates the wetted part of the geometry returning a new surface object (it adopts the same algoritm of previous functions)
 
->      Body below the waterpane
+>      Body below the waterplane
 >      
 ## Getting started
 To use Nautilus you will need an environment with the <a href="https://ubuntu.com/" target="_blank">Ubuntu</a> distribution of Linux and the cloned nautilus repository. A virtual environment or <a href="https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview" target="_blank">Windows Subsystem for Linux (WSL)</a> will also work.
@@ -50,10 +50,10 @@ We have provided the source and binaries for two example test cases:
 The hydrostatics binary takes the following inputs:
 >       Input file (STL) - manditory
 >       Draft(s) - manditory
->       Output for hydrostatics - optional (otherwise printed to the terminal)
->       Output for the wetted hull - optional
+>       Output file path for hydrostatics - optional (otherwise printed to the terminal)
+>       Output file path for the wetted hull - optional (otherwise not written to STL)
 
-The output will be written to the specified file or the terminal if there are only two input arguments:
+The output will be written to the specified file (or the terminal if there are only two input arguments) as follows :
 >       Draft, V, BX, BY, BZ, Sw, A, FX, FY, FZ, Ix, Iy, Lwl, Bwl
 
 
@@ -61,9 +61,9 @@ The output will be written to the specified file or the terminal if there are on
 The faststatics binary takes the following inputs:
 >       Input file (STL) - manditory
 >       Draft(s) - manditory
->       Output for hydrostatics - optional (otherwise printed to the terminal)
+>       Output file path for hydrostatics - optional (otherwise printed to the terminal)
 
-The output will be written to the specified file or the terminal if there are only two input arguments:
+The output will be written to the specified file (or the terminal if there are only two input arguments) as follows:
 >       Draft, V, BX, BY, BZ, Sw, A, FX, FY, FZ, Ix, Iy, Lwl, Bwl
 
 In `Run` we have provided a bash script that can be used to call the above test cases. You can execute the file with the following command in the Linux terminal
