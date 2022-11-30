@@ -13,7 +13,7 @@ do
   filename=$(echo | basename "$FILE");
   echo In file: $filename
 
- # ./bin/hydrostatics $FILE "0,0.1,0.2,0.3" "$f2/out.csv" "$f3/KCS"
-  ./bin/faststatics $FILE "0,0.1,0.2,0.3" "$f2/out_fast.csv"
+  ./bin/hydrostatics $FILE "0.0,0.1" "$f2/out.csv" "$f3/KCS"
+  ./bin/faststatics $FILE "0.0,0.1" "$f2/out_fast.csv"
 
 done
