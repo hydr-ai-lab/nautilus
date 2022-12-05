@@ -60,8 +60,8 @@ The output will be written to the specified file (or the terminal if there are o
 
 2. `faststatics` - To determine the hydrostatics of the wetted body and waterplane surface using the fast implementations (i.e., the `HydrostaticFast` and `SectionFast` methods).
 The faststatics binary takes the following inputs:
->       Input file (STL) - manditory
->       Draft(s) - manditory
+>       Input file (STL) - mandatory
+>       Draft(s) - mandatory
 >       Output file path for hydrostatics - optional (otherwise printed to the terminal)
 
 The output will be written to the specified file (or the terminal if there are only two input arguments) as follows:
