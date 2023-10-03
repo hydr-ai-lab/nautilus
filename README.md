@@ -1,4 +1,4 @@
-# Nataulis
+# Nautilus
 
 **\\ nȯ-tə-ləs \\**
 
@@ -8,7 +8,7 @@ Hydrostatic analysis tool for vessels
 >       -Jules Verne, The Mysterious Island
 
 ### Contents
-- [Nataulis](#nataulis)
+- [Nautilus](#Nautilus)
   * [Introduction](#Introduction)
   * [Getting started](#Getting-started)
   * [Methods](#Methods)
@@ -16,9 +16,9 @@ Hydrostatic analysis tool for vessels
   * [Publications](#Publications)
 
 ## Introduction
-**Nataulis** is a hydrostatic analysis tool for vessels written in c++ and compiled for Linux. Given the 3D definition of a hull (in STL format) and a specified draft, Nautilus can extract the principal hydrostatic features of the hull.
+**Nautilus** is a hydrostatic analysis tool for vessels written in c++ and compiled for Linux. Given the 3D definition of a hull (in STL format) and a specified draft, Nautilus can extract the principal hydrostatic features of the hull.
 
-In the current release of nautilus there are three main functional uses:
+In the current release of Nautilus there are three main functional uses:
 
 1. Calculate the hydrostatics of the wetted hull body given the draft;
 2. Calculate the hydrostatics of the waterplane section given the draft;
@@ -42,9 +42,9 @@ Conventionally, the hull reference frame is considered, so the X, Y and Z axis a
 >      Body below the waterplane
 >      
 ## Getting started
-To use Nautilus you will need an environment with the <a href="https://ubuntu.com/" target="_blank">Ubuntu</a> distribution of Linux and the cloned nautilus repository. A virtual environment or <a href="https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview" target="_blank">Windows Subsystem for Linux (WSL)</a> will also work.
+To use Nautilus you will need an environment with the <a href="https://ubuntu.com/" target="_blank">Ubuntu</a> distribution of Linux and the cloned Nautilus repository. A virtual environment or <a href="https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-10#1-overview" target="_blank">Windows Subsystem for Linux (WSL)</a> will also work.
 
-When you are using nautilus for the first time we suggest running the test cases provided in the main branch. We have provided a test hull (the <a href="http://www.simman2008.dk/KCS/kcs_geometry.htm" target="_blank">KCS</a> with appendages) in the `geo/` folder.
+When you are using Nautilus for the first time we suggest running the test cases provided in the main branch. We have provided a test hull (the <a href="http://www.simman2008.dk/KCS/kcs_geometry.htm" target="_blank">KCS</a> with appendages) in the `geo/` folder.
 
 We have provided the source and binaries for two example test cases:
 1. `hydrostatics` - To determine the hydrostatics of the wetted body and waterplane surface (i.e., implementing the `Hydrostatic` and `Section` methods) given the draft(s) and (optionally) write the wetted hell to an STL file (i.e., implementing the `Cut` method).
